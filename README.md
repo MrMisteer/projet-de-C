@@ -3,11 +3,13 @@
 Voici ce qui fonctionne dans notre projet : 
 
   Partie 1
-  Nous avons réussie à faire toutes les fonctions 
+  
+  Nous avons réussie à faire toutes les fonctions.
   Nous pouvons créer une liste et y insérer les valeurs que l'on veut, ces valeurs vont se ranger dans l'ordre croissant.
-  Nous poouvons afficher la liste correctement
+  Nous pouvons afficher la liste correctement
 
   Partie 2 
+  
   Nous avons toutes les fonctions c'est à dire la recherche classique, par niveaux et remplir une liste par niveaux
   On se rend bien compte que la recherche par dichotomie est plus efficace que la recherche au niveau 0
   Cependant dans notre code on se rend compte que la recherche par dichotomie n'est pas optimal

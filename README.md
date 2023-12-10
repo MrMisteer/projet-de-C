@@ -31,7 +31,8 @@ pour le nom ;
 3. Créer un contact (avec insertion dans la liste) ;
 4. Créer un rendez-vous pour un contact (avec insertion dans la liste si le contact n’existe pas) ;
 5. Supprimer un rendez-vous ;
-   Nous avons la fonction qui permet de sauvegarder la liste mais elle ne fonctionne pas.
-   Et ne nous n'avons pas l'étude des complexités.
+
+Nous avons la fonction qui permet de sauvegarder la liste mais elle ne fonctionne pas.
+Et ne nous n'avons pas l'étude des complexités.
 
   

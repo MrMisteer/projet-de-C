@@ -24,7 +24,7 @@ Courbe par recherche par dichotomie :
 ![image](https://github.com/MrMisteer/projet-de-C/assets/129770157/323580d4-5c14-4ce5-83ab-4b771eaf3519)
 
   Partie 3
-  Nous avons qui menu permet de :
+  Nous avons un menu qui permet de :
 1. Rechercher un contact, et proposer une complétion automatique à partir de la 3ème lettre entrée
 pour le nom (il faudra donc faire la saisie du nom de recherche caractère par caractère) ;
 2. Afficher les rendez-vous d’un contact ;

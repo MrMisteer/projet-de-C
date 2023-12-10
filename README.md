@@ -1,4 +1,4 @@
-# projet-de-C
+# projet-de-C, Jérôme BALTHAZAR, Julien BLANCHARD, Séverin ETIEVANT
 
 Voici ce qui fonctionne dans notre projet : 
 

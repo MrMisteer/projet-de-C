@@ -2,33 +2,57 @@
 #include <stdlib.h>
 #include "Cellule.h"
 #include "dichotomie.h"
+#include "timer.h"
 
 int main() {
-    int max_level = 3; // Niveau maximal de la liste à plusieurs niveaux
+    //initialisation de toutes les variables
+    int max_level = 16; // Niveau maximal de la liste à plusieurs niveaux
+    int nombreElement = 65536;
+    srand((time(NULL)));  //seed pour avoir des nombres aléatoires
 
-    MultiLevelList* new_list = create_multi_level_list(max_level);
+    MultiLevelList* new_list = create_multi_level_list(max_level);  //création de la liste
 
-    if (new_list != NULL) {
-        printf("Liste a plusieurs niveaux creee avec succès : max_level = %d\n", new_list->max_level);
+    //on va ouvrir un fichier texte pour y mettre les résultats du temps mis pour la
+    //recherche au niveau 0 et au sur tous les niveaux
 
-        // Insérer des cellules triées par ordre croissant
-        insert_sorted_cell(new_list, create_cell(18, 0));
-        insert_sorted_cell(new_list, create_cell(18, 1));
-        insert_sorted_cell(new_list, create_cell(3, 3));
-        insert_sorted_cell(new_list, create_cell(32, 2));
-        insert_sorted_cell(new_list, create_cell(56, 3));
-        insert_sorted_cell(new_list, create_cell(9, 2));
+    FILE *log_file = fopen("log.txt","w");
+    char format[] = "%d\t%s\t%s\n" ;
+    int level;
+    char *time_lvl0;
+    char *time_all_levels;
 
-        // Afficher tous les niveaux de la liste
-        display_all_levels(*new_list);
+    //on remplit une liste
+    new_list = CreationListeNiveau(max_level,nombreElement);
 
-        printf("%d",RechercheNiveau(*new_list,17));
-
-        // Libérer la liste
-        free_multi_level_list(new_list);
-
-
+    //on test le temps mis par le recherche au niveau 0 10 000 fois
+    printf("Le temps mis pour la recherche classique est :\n");
+    startTimer();
+    for (int i = 0; i<10000;i++){
+        RechercheClassique(*new_list,rand());
     }
+    displayTime();
+
+    stopTimer();
+
+
+    time_lvl0 = getTimeAsString(); // fonction du module timer
+
+    //on test le temps mis par la recherche sur tous les niveaux 10 000 fois
+    printf("Le temps mis pour la recherche a plusieurs niveaux est :\n");
+    startTimer();
+    for(int j = 0;j<10000;j++) {
+        RechercheNiveau(*new_list,rand());
+    }
+    displayTime();
+
+    stopTimer();
+
+
+    time_all_levels = getTimeAsString();
+
+    fprintf(log_file,format,level,time_lvl0, time_all_levels);//on stock les temps mis
+
+    fclose(log_file);
 
     return 0;
 }

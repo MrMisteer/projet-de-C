@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Cellule.h"
-#define MAX_LEVEL 5 // Niveau maximum de la liste chaînée
+#define MAX_LEVEL 20 // Niveau maximum de la liste chaînée
 
 
 // Fonction pour créer une nouvelle cellule
 Cell* create_cell(int value, int level) {
     if (level < 0 || level > MAX_LEVEL) {
-        printf("Niveau invalide. Doit être entre 0 et %d.\n", MAX_LEVEL);
+        printf("Niiiiiiiveau invalide. Doit être entre 0 et %d.\n", MAX_LEVEL);
         return NULL;
     }
 
@@ -95,6 +95,9 @@ void display_cells_at_level(MultiLevelList list, int level) {
 
     printf("NULL\n");
 }
+
+
+
 
 
 void display_all_levels(MultiLevelList list) {

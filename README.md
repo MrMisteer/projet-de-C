@@ -26,7 +26,7 @@ Courbe par recherche par dichotomie :
   Partie 3
   Nous avons un menu qui permet de :
 1. Rechercher un contact, et proposer une complétion automatique à partir de la 3ème lettre entrée
-pour le nom (il faudra donc faire la saisie du nom de recherche caractère par caractère) ;
+pour le nom ;
 2. Afficher les rendez-vous d’un contact ;
 3. Créer un contact (avec insertion dans la liste) ;
 4. Créer un rendez-vous pour un contact (avec insertion dans la liste si le contact n’existe pas) ;
